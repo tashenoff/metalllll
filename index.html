@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         * {
             margin: 0;
@@ -666,6 +668,112 @@
                 font-size: 0.9rem !important;
             }
         }
+
+        /* Swiper Projects Section */
+        .projects-section {
+            background: var(--bg-light);
+        }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Custom navigation buttons - always visible */
+        .custom-swiper-button-next,
+        .custom-swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+            background: white;
+            color: var(--accent-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .custom-swiper-button-next:hover,
+        .custom-swiper-button-prev:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .custom-swiper-button-next {
+            right: 10px;
+        }
+
+        .custom-swiper-button-prev {
+            left: 10px;
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--accent-color);
+            opacity: 0.5;
+            width: 12px;
+            height: 12px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide img {
+                height: 300px;
+            }
+
+            .custom-swiper-button-next,
+            .custom-swiper-button-prev {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .custom-swiper-button-next,
+            .custom-swiper-button-prev {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .custom-swiper-button-next {
+                right: 5px;
+            }
+
+            .custom-swiper-button-prev {
+                left: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -684,6 +792,7 @@
                 <li><a href="#design">Проектирование</a></li>
                 <li><a href="#construction">Строительство</a></li>
                 <li><a href="#full-cycle">Полный цикл</a></li>
+                <li><a href="#projects">Проекты</a></li>
                 <li><a href="#why-us">Преимущества</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
@@ -719,7 +828,7 @@
             <div class="hero-subtitle">Передовые решения в строительстве</div>
             <h1 class="hero-title">Проектирование и строительство металлоконструкций любой сложности</h1>
             <p style="font-size: 1.2rem; margin-top: 1rem; line-height: 1.8;">
-                Производство сендвич-панелей | Строительство ангаров и складов | Полный цикл работ
+                Производство сэндвич-панелей | Строительство ангаров и складов | Полный цикл работ
             </p>
             <div class="hero-buttons">
                 <a href="https://wa.me/77078385033?text=Здравствуйте!%20Хочу%20получить%20консультацию" class="btn btn-primary">
@@ -943,6 +1052,84 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Наши проекты</h2>
+        <div class="section-subtitle">Реализованные объекты</div>
+        
+        <div class="swiper-container mySwiper" style="position: relative;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.40 (1).jpeg" alt="Проект 1"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.40 (2).jpeg" alt="Проект 2"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.40.jpeg" alt="Проект 3"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.41 (1).jpeg" alt="Проект 4"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.41 (2).jpeg" alt="Проект 5"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.41 (3).jpeg" alt="Проект 6"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.41.jpeg" alt="Проект 7"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.42 (1).jpeg" alt="Проект 8"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.42 (2).jpeg" alt="Проект 9"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.42 (3).jpeg" alt="Проект 10"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.42 (4).jpeg" alt="Проект 11"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.42.jpeg" alt="Проект 12"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.43 (1).jpeg" alt="Проект 13"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.43 (2).jpeg" alt="Проект 14"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.43 (3).jpeg" alt="Проект 15"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.43.jpeg" alt="Проект 16"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.44 (1).jpeg" alt="Проект 17"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.44 (2).jpeg" alt="Проект 18"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.44 (3).jpeg" alt="Проект 19"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.44 (4).jpeg" alt="Проект 20"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.44.jpeg" alt="Проект 21"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.45 (1).jpeg" alt="Проект 22"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.45 (2).jpeg" alt="Проект 23"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.45 (3).jpeg" alt="Проект 24"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.45 (4).jpeg" alt="Проект 25"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.45.jpeg" alt="Проект 26"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.46 (1).jpeg" alt="Проект 27"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.46 (2).jpeg" alt="Проект 28"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.46 (3).jpeg" alt="Проект 29"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.46 (4).jpeg" alt="Проект 30"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.46.jpeg" alt="Проект 31"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.47 (1).jpeg" alt="Проект 32"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.47 (2).jpeg" alt="Проект 33"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.47 (3).jpeg" alt="Проект 34"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.47 (4).jpeg" alt="Проект 35"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.47.jpeg" alt="Проект 36"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.48 (1).jpeg" alt="Проект 37"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.48 (2).jpeg" alt="Проект 38"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.48 (3).jpeg" alt="Проект 39"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.48 (4).jpeg" alt="Проект 40"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.48.jpeg" alt="Проект 41"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.49 (1).jpeg" alt="Проект 42"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.49 (2).jpeg" alt="Проект 43"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.49 (3).jpeg" alt="Проект 44"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.49 (4).jpeg" alt="Проект 45"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.49.jpeg" alt="Проект 46"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.50 (1).jpeg" alt="Проект 47"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.50 (2).jpeg" alt="Проект 48"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.50 (3).jpeg" alt="Проект 49"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.50 (4).jpeg" alt="Проект 50"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.50.jpeg" alt="Проект 51"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.51 (1).jpeg" alt="Проект 52"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.51 (2).jpeg" alt="Проект 53"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.51 (3).jpeg" alt="Проект 54"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.51 (4).jpeg" alt="Проект 55"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.51.jpeg" alt="Проект 56"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.52 (1).jpeg" alt="Проект 57"></div>
+                <div class="swiper-slide"><img src="img/WhatsApp Image 2026-07-20 at 20.24.52.jpeg" alt="Проект 58"></div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Custom navigation buttons -->
+            <div class="custom-swiper-button-prev">‹</div>
+            <div class="custom-swiper-button-next">›</div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://wa.me/77078385033?text=Здравствуйте!%20Хочу%20обсудить%20проект" class="btn btn-primary">📱 Обсудить ваш проект</a>
+        </div>
+    </section>
+
     <!-- Why Us Section -->
     <section id="why-us">
         <h2 class="section-title">Почему выбирают нас?</h2>
@@ -1026,6 +1213,9 @@
         💬
     </a>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
         // Mobile menu toggle
         const menuToggle = document.querySelector('.menu-toggle');
@@ -1051,6 +1241,48 @@
                 navMenu.classList.remove('active');
                 menuToggle.textContent = '☰';
             }
+        });
+
+        // Swiper initialization
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        // Custom navigation buttons
+        document.querySelector('.custom-swiper-button-next').addEventListener('click', function() {
+            swiper.slideNext();
+        });
+
+        document.querySelector('.custom-swiper-button-prev').addEventListener('click', function() {
+            swiper.slidePrev();
         });
     </script>
 </body>
